@@ -1,0 +1,22 @@
+<div class="container shadow-lg p-3 mb-5 bg-white rounded background">
+    <img class="img" src="../../assets/user.svg" width="80px" height="80px">
+    <form  [formGroup]="RegForm" (ngSubmit)="onSubmit()">
+      <!-- <h3 class="heading">Registration Page</h3> -->
+      <div class="form-group">
+          <input class="form-control" id="exampleInputName1" formControlName="name" aria-describedby="emailHelp" placeholder="Enter your name">
+        </div>
+      <div class="form-group">
+        <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" placeholder="Password">
+      </div>
+      <div class="form-group">
+          <input type="password" class="form-control" id="exampleInputPassword2" formControlName="confirmPassword" placeholder="Password">
+        </div>
+      <button type="submit" class="btn btn-primary btn-block btn-md button" [disabled]="!RegForm.valid">Register</button>
+    </form>
+    <a routerLink="/login">Back to Login Page</a>
+  </div>
+  
+    
